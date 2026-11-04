@@ -1,0 +1,14 @@
+{
+  "alarma_humano": "../recursos/audios/externos/01.wav",
+  "alarma_reloj": "../recursos/audios/externos/02.wav",
+  "alarma_full_03": "../recursos/audios/externos/03.wav",
+  "alarma_full_04": "../recursos/audios/externos/04.wav",
+  "alarma_full_05": "../recursos/audios/externos/05.wav",
+  "alarma_full_06": "../recursos/audios/externos/06.wav",
+  "alarma_full_07": "../recursos/audios/externos/07.wav",
+  "alarma_full_08": "../recursos/audios/externos/08.wav",
+  "alarma_full_09": "../recursos/audios/externos/09.wav",
+  "alarma_full_10": "../recursos/audios/externos/10.wav",
+  "alarma_full_11": "../recursos/audios/externos/11.wav",
+  "alarma_full_12": "../recursos/audios/externos/12.wav"
+}

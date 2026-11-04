@@ -61,6 +61,47 @@ No se garantiza acceso futuro ni se concede una licencia adicional del proveedor
 El código envía solo el diálogo a `speech.platform.bing.com`, mediante el proxy
 configurado y con TLS verificado. No requiere cuentas personales en redes sociales.
 
+## Montaje sin API de voz
+
+Ahora se puede usar un archivo local por diálogo, por ejemplo una grabación
+propia o narraciones descargadas con autorización. Este modo no genera texto
+nuevo con esa voz ni concede derechos sobre una muestra de terceros.
+
+1. Copiar `configuracion/audios_locales.ejemplo.json` con otro nombre.
+2. Indicar archivos reales para los doce identificadores; las rutas relativas
+   se interpretan desde la carpeta del JSON. No se aceptan entradas faltantes.
+3. Ejecutar, en el entorno Python preparado:
+
+```
+/workspace/.venvs/wow/bin/python scripts/producir_alarma.py --audios-locales configuracion/mis_audios.json
+```
+
+El flujo omite el generador de voz y reutiliza los fotogramas existentes. No
+llama ElevenLabs ni consume créditos de síntesis. Los archivos deben contener
+los diálogos del guion; una preview con palabras distintas no los sustituye.
+Se conserva el límite de ajuste temporal del 30 %: un audio que no quepa se
+rechaza para no cortarlo silenciosamente. No se incluye reconocimiento automático
+para comprobar que la grabación diga lo escrito: revisar ese contenido al escuchar.
+Si se usan archivos externos, conservar también esos audios y el manifiesto;
+el empaquetador histórico no importa automáticamente esos archivos personales.
+
+Los subtítulos empiezan con la voz y permanecen un poco más para facilitar
+la lectura, respetando el siguiente diálogo y el final de la escena. El fin
+del audio y el fin de lectura quedan registrados por separado.
+
+## Exportación ligera independiente
+
+```
+python scripts/exportar_ligero.py ruta/al/video.mp4 --salida ruta/al/video_ligero.mp4
+```
+
+No necesita Internet ni modelos de voz. Conserva proporciones, evita ampliar
+imágenes pequeñas, usa dos hilos y valida la decodificación de la copia. No
+sobrescribe el original; para reemplazar una salida existente exige
+`--sobrescribir`. `FFMPEG` y `FFPROBE` pueden contener las rutas completas de
+los ejecutables. El exportador se ha ejecutado en Linux; no afirmar prueba
+en Windows por el solo hecho de aceptar esas rutas.
+
 La mezcla atenúa el fondo durante los diálogos. Los subtítulos se calculan
 con la duración real del audio recortado y ajustado, no mediante tiempos
 inventados por palabra. Se comprueba audio, formato, duración, 528 fotogramas,

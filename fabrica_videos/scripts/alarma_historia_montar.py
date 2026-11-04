@@ -1,5 +1,6 @@
 """Exporta la historia completa: imagen 3D, diálogos, subtítulos y audio propio."""
 import json
+import argparse
 import math
 import os
 from pathlib import Path
@@ -7,6 +8,7 @@ import subprocess
 import wave
 import numpy as np
 from alarma_montar import speech, SR
+from utilidades_medios import audios_locales, tiempos_legibles
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'exportaciones/alarma_final'
@@ -20,6 +22,10 @@ def stamp(t,ass=False):
  ms=round(t*1000);return f'{ms//3600000:02}:{ms//60000%60:02}:{ms//1000%60:02},{ms%1000:03}'
 
 def main():
+ parser=argparse.ArgumentParser(description=__doc__)
+ parser.add_argument('--audios-locales',type=Path,help='Manifiesto JSON completo; no llama servicios de voz')
+ args=parser.parse_args()
+ externos=audios_locales(args.audios_locales,[d['archivo'] for d in CFG['dialogos']]) if args.audios_locales else {}
  OUT.mkdir(exist_ok=True,parents=True)
  cache=ROOT/'registros/cache';cache.mkdir(exist_ok=True,parents=True)
  os.environ.setdefault('XDG_CACHE_HOME',str(cache))
@@ -56,7 +62,7 @@ def main():
  bed[(t>16.75)&(t<17.45)]*=.15
  duck=np.ones(len(t))
  for d in CFG['dialogos']:
-  a=speech(d['archivo'],d['maximo']);start=d['inicio'];end=start+len(a)/SR
+  a=speech(d['archivo'],d['maximo'],externos.get(d['archivo']));start=d['inicio'];end=start+len(a)/SR
   if end>total:raise RuntimeError('Voz fuera de duración')
   k=round(start*SR);voices[k:k+len(a)]+=a
   duck[max(0,k-int(.03*SR)):min(len(t),k+len(a)+int(.10*SR))]=.45
@@ -68,9 +74,10 @@ def main():
  with wave.open(str(wav),'wb') as w:
   w.setnchannels(2);w.setsampwidth(2);w.setframerate(SR)
   w.writeframes((np.stack([mix,mix],axis=1)*32767).astype('<i2').tobytes())
+ events=tiempos_legibles(events,CFG['escenas'],total)
  (OUT/'dialogos_finales.json').write_text(json.dumps(events,ensure_ascii=False,indent=2),encoding='utf-8')
  subtitle=ROOT/'subtitulos/alarma_final.srt'
- subtitle.write_text('\n\n'.join(f'{i+1}\n{stamp(d["inicio"])} --> {stamp(d["fin"])}\n{d["texto"]}' for i,d in enumerate(events))+'\n',encoding='utf-8')
+ subtitle.write_text('\n\n'.join(f'{i+1}\n{stamp(d["inicio"])} --> {stamp(d["fin_subtitulo"])}\n{d["texto"]}' for i,d in enumerate(events))+'\n',encoding='utf-8')
  ass=ROOT/'subtitulos/alarma_final.ass'
  header='''[Script Info]
 ScriptType: v4.00+
@@ -83,7 +90,7 @@ Style: Default,DejaVu Sans,44,&H00FFFFFF,&H000000FF,&H00201810,&H80000000,-1,0,0
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 '''
- ass.write_text(header+''.join(f'Dialogue: 0,{stamp(d["inicio"],True)},{stamp(d["fin"],True)},Default,,0,0,0,,{d["texto"]}\n' for d in events),encoding='utf-8')
+ ass.write_text(header+''.join(f'Dialogue: 0,{stamp(d["inicio"],True)},{stamp(d["fin_subtitulo"],True)},Default,,0,0,0,,{d["texto"]}\n' for d in events),encoding='utf-8')
  font='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
  filters=['scale=720:1280:flags=lanczos',f'ass={ass}']
  for s in CFG['escenas']:

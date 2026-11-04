@@ -43,7 +43,9 @@ def main():
  assert len(events)==12
  for i,d in enumerate(events):
   assert 0<=d['inicio']<d['fin']<=22
+  assert d['fin']<=d.get('fin_subtitulo',d['fin'])<=22
   if i:assert d['inicio']>=events[i-1]['fin']
+  if i:assert d['inicio']>=events[i-1].get('fin_subtitulo',events[i-1]['fin'])
  srt=(ROOT/'subtitulos/alarma_final.srt').read_text(encoding='utf-8')
  for d in events:assert d['texto'] in srt
  reports=[inspect(OUT/'la_alarma_cobra_vida.mp4',720,1280),

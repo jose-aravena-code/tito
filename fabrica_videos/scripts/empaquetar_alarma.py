@@ -8,7 +8,7 @@ def main():
  target=Path('/workspace/fabrica_alarma_proyecto.zip')
  scripts=['alarma_3d.py','alarma_montar.py','alarma_historia_3d.py',
   'alarma_historia_voz.py','alarma_historia_montar.py','alarma_historia_comprobar.py',
-  'producir_alarma.py','empaquetar_alarma.py']
+  'producir_alarma.py','empaquetar_alarma.py','utilidades_medios.py','exportar_ligero.py']
  files=[ROOT/'ALARMA.md',ROOT/'requirements.txt',ROOT/'configuracion/alarma_historia.json',
   ROOT/'subtitulos/alarma_final.srt',ROOT/'subtitulos/alarma_final.ass',
   ROOT/'registros/alarma_historia_validacion.json',ROOT/'exportaciones/alarma_prueba/alarma.blend']

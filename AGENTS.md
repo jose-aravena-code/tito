@@ -336,3 +336,27 @@ panel de control, aprobación desde móvil, programación y publicación en rede
 estadísticas e integraciones con cuentas. No presentarlas como disponibles.
 Primero resolver acceso y elegir una voz que convenza al usuario; continuar
 con prototipos verificables y mejoras de actuación/animación según su revisión.
+
+## Mejoras posteriores disponibles sin nuevos permisos
+
+Ver `fabrica_videos/MEJORAS_Y_BLOQUEOS.md` para la comprobación más reciente de
+red. GitHub, Google Trends, TikTok Creative Center y el blog de YouTube respondieron
+200; ElevenLabs, Hugging Face, MiniMax e Instagram siguieron bloqueados por CONNECT
+403. No se volvió a publicar el entorno ni se modificó la lista guardada.
+
+Se mejoró el tiempo de lectura de subtítulos, conservando inicio de voz y
+registrando `fin_subtitulo` separado de `fin`. Se reexportó y validó el episodio
+con las voces existentes; no son voces nuevas o aprobadas por el usuario.
+
+El comando `scripts/producir_alarma.py --audios-locales <manifiesto.json>` acepta
+los doce diálogos como archivos y omite el generador remoto. Se probó el flujo
+completo con los audios originales existentes y seis pruebas de regresión.
+El ejemplo está en `configuracion/audios_locales.ejemplo.json`. Conservar los
+audios externos y su manifiesto por separado si se usan: el ZIP histórico no
+los importa automáticamente. No asumir derechos o texto correcto por recibir
+un archivo; escuchar y comprobar el contenido antes de publicar.
+
+`scripts/exportar_ligero.py` crea copias pequeñas sin Internet y protege el
+original. `scripts/diagnosticar_entorno.py --red` registra lecturas reales sin
+modificar permisos ni usar cuentas. No reinterpretar la presencia de un binario
+o una respuesta 200 de portada como inferencia, API o permisos listos.

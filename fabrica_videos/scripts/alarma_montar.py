@@ -10,8 +10,8 @@ OUT=ROOT/'exportaciones/alarma_prueba'
 AUDIO=ROOT/'recursos/audios'
 SR=48000
 
-def speech(name,maximum):
- p=AUDIO/(name+'.mp3')
+def speech(name,maximum,path_override=None):
+ p=Path(path_override) if path_override is not None else AUDIO/(name+'.mp3')
  # Quita únicamente silencio exterior, no pausas dentro de las palabras.
  trim='silenceremove=start_periods=1:start_duration=0.02:start_threshold=-45dB,areverse,silenceremove=start_periods=1:start_duration=0.02:start_threshold=-45dB,areverse'
  args=['ffmpeg','-v','error','-i',str(p),'-af',trim,'-ar',str(SR),'-ac','1','-f','f32le','-']
