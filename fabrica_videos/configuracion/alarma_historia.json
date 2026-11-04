@@ -1,0 +1,26 @@
+{
+  "titulo": "Mi alarma se cansó de mí",
+  "duracion": 22,
+  "escenas": [
+    {"numero": 1, "inicio": 0, "duracion": 4, "fps_origen": 24, "texto": "MI ALARMA SE CANSÓ DE MÍ"},
+    {"numero": 2, "inicio": 4, "duracion": 3, "fps_origen": 12, "texto": "NO ACEPTABA EXCUSAS"},
+    {"numero": 3, "inicio": 7, "duracion": 3, "fps_origen": 12, "texto": "MI PLAN ERA PERFECTO…"},
+    {"numero": 4, "inicio": 10, "duracion": 3, "fps_origen": 12, "texto": "ME LLEVÓ AL TRABAJO"},
+    {"numero": 5, "inicio": 13, "duracion": 4, "fps_origen": 12, "texto": "LLEGUÉ EN PIJAMA"},
+    {"numero": 6, "inicio": 17, "duracion": 5, "fps_origen": 12, "texto": "EL JEFE TENÍA UNA PEOR"}
+  ],
+  "dialogos": [
+    {"archivo": "alarma_humano", "texto": "Cinco minutitos…", "voz": "es-MX-JorgeNeural", "inicio": 0.04, "maximo": 1.48},
+    {"archivo": "alarma_reloj", "texto": "¡Eso dijiste ayer!", "voz": "es-MX-DaliaNeural", "inicio": 1.68, "maximo": 1.6},
+    {"archivo": "alarma_full_03", "texto": "¡No! ¡Hoy es domingo!", "voz": "es-MX-JorgeNeural", "inicio": 4.12, "maximo": 1.45},
+    {"archivo": "alarma_full_04", "texto": "¡Es lunes!", "voz": "es-MX-DaliaNeural", "inicio": 5.8, "maximo": 1.0},
+    {"archivo": "alarma_full_05", "texto": "Aquí no me encuentra.", "voz": "es-MX-JorgeNeural", "inicio": 7.12, "maximo": 1.25},
+    {"archivo": "alarma_full_06", "texto": "¡Te estoy viendo!", "voz": "es-MX-DaliaNeural", "inicio": 8.65, "maximo": 1.2},
+    {"archivo": "alarma_full_07", "texto": "¡Al trabajo!", "voz": "es-MX-DaliaNeural", "inicio": 10.1, "maximo": 1.0},
+    {"archivo": "alarma_full_08", "texto": "¡Pero sigo en pijama!", "voz": "es-MX-JorgeNeural", "inicio": 11.3, "maximo": 1.5},
+    {"archivo": "alarma_full_09", "texto": "Jefe, tuve un problema con la alarma.", "voz": "es-MX-JorgeNeural", "inicio": 13.12, "maximo": 2.6},
+    {"archivo": "alarma_full_10", "texto": "¿Otra vez?", "voz": "es-ES-AlvaroNeural", "inicio": 16.0, "maximo": 0.85},
+    {"archivo": "alarma_full_11", "texto": "¡La mía es peor!", "voz": "es-ES-AlvaroNeural", "inicio": 17.6, "maximo": 1.5},
+    {"archivo": "alarma_full_12", "texto": "¡Reunión a las ocho!", "voz": "es-MX-JorgeNeural", "inicio": 19.5, "maximo": 1.5}
+  ]
+}

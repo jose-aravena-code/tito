@@ -1,0 +1,16 @@
+{
+  "titulo": "La señal Wow!",
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "voice": "es-MX-JorgeNeural",
+  "rate": "+20%",
+  "pitch": "-4Hz",
+  "segments": [
+    {"text": "El quince de agosto de mil novecientos setenta y siete, la Tierra recibió una extraña señal desde el espacio.", "display": "El 15 de agosto de 1977, la Tierra recibió una extraña señal desde el espacio.", "preview_duration": 6.2},
+    {"text": "Duró apenas setenta y dos segundos.", "display": "Duró apenas 72 SEGUNDOS.", "preview_duration": 2.0},
+    {"text": "Un astrónomo encontró el registro y escribió una sola palabra: ¡Wow!", "display": "Un astrónomo encontró el registro y escribió una sola palabra: ¡WOW!", "preview_duration": 4.1},
+    {"text": "No volvió a detectarse de forma concluyente.", "display": "No volvió a detectarse de forma concluyente.", "preview_duration": 2.4},
+    {"text": "¿Fue un fenómeno natural, o alguien intentó comunicarse con nosotros?", "display": "¿Fue un fenómeno natural… o alguien intentó comunicarse con nosotros?", "preview_duration": 5.1}
+  ]
+}

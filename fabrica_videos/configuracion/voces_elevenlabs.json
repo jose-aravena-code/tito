@@ -1,0 +1,14 @@
+{
+  "proveedor_preferido": "elevenlabs",
+  "origen_seleccion": "Seis enlaces elegidos explícitamente por el usuario",
+  "estado": "Seleccionadas; acceso, disponibilidad en la cuenta y condiciones pendientes de verificar",
+  "politica": "Elegir entre estas voces para nuevos proyectos. La elección creativa no autoriza compras, suscripciones ni consumo ilimitado de créditos.",
+  "voces": [
+    {"numero": 1, "voice_id": "aYbngTsp5kp0sibI3Z0T", "url": "https://elevenlabs.io/voices/aYbngTsp5kp0sibI3Z0T"},
+    {"numero": 2, "voice_id": "htFfPSZGJwjBv1CL0aMD", "url": "https://elevenlabs.io/voices/htFfPSZGJwjBv1CL0aMD"},
+    {"numero": 3, "voice_id": "DdKbXdRlBmj7Ty7N0FVr", "url": "https://elevenlabs.io/voices/DdKbXdRlBmj7Ty7N0FVr"},
+    {"numero": 4, "voice_id": "vPrtQbTwtAoP87VnQmID", "url": "https://elevenlabs.io/voices/vPrtQbTwtAoP87VnQmID"},
+    {"numero": 5, "voice_id": "Wl3O9lmFSMgGFTTwuS6f", "url": "https://elevenlabs.io/voices/Wl3O9lmFSMgGFTTwuS6f"},
+    {"numero": 6, "voice_id": "XJPGNjKfwXiN0kGtutbV", "url": "https://elevenlabs.io/voices/XJPGNjKfwXiN0kGtutbV"}
+  ]
+}

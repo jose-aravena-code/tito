@@ -1,0 +1,5 @@
+# Dependencias opcionales para la comparación gratuita en CPU.
+kokoro-onnx==0.6.1
+onnxruntime==1.31.1
+espeakng-loader==0.2.4
+soundfile

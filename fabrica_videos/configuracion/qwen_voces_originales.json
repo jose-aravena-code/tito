@@ -1,0 +1,11 @@
+{
+  "modelo": "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+  "idioma": "Spanish",
+  "texto": "¿Cinco minutitos más? ¡Eso dijiste ayer! Vamos, que llegamos tarde.",
+  "referencias_audio": [],
+  "perfiles": [
+    {"nombre": "Cercana", "semilla": 41, "instruccion": "An original young adult male voice, warm and conversational, medium pitch, clear Latin American Spanish. Relaxed and friendly, with natural pauses and a light smile. Clearly articulated without overpronouncing consonants. No announcer delivery, no forced bass or elderly-sounding vibrato. Express the question sleepily, the exclamation with playful surprise, and the last sentence with friendly urgency."},
+    {"nombre": "Agil", "semilla": 73, "instruccion": "An original youthful male voice, light medium register, lively and spontaneous, speaking clear Latin American Spanish. Energetic but not rushed, bright and casual, with expressive pitch changes and easy pronunciation. Avoid a solemn narrator style or deep resonant bass. Make the sentence sound like a funny real conversation between friends."},
+    {"nombre": "Calida", "semilla": 109, "instruccion": "An original adult male voice around thirty, medium-low pitch without exaggerated bass, gently textured and intimate. Speak clear Latin American Spanish with a friendly everyday conversational delivery and subtle humor. Natural modulation and breathing, restrained consonants, no theatrical radio presentation. Convey tiredness in the question, amused reproach in the exclamation, and a warm energetic finish."}
+  ]
+}
