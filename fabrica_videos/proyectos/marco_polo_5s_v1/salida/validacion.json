@@ -1,0 +1,30 @@
+{
+  "videos": [
+    {
+      "archivo": "marco_polo_5s_sin_audio.mp4",
+      "duracion": 5.0,
+      "fotogramas": 120,
+      "fps": 24,
+      "pistas_audio": 0,
+      "decodificacion": "completa sin errores",
+      "sha256": "d0a3f23156f5d0a28ad41fcaa81066e45c23e9eacae398d325a9b1a06cb59113"
+    },
+    {
+      "archivo": "marco_polo_5s_con_M1.mp4",
+      "duracion": 5.0,
+      "fotogramas": 120,
+      "fps": 24,
+      "pistas_audio": 1,
+      "decodificacion": "completa sin errores",
+      "sha256": "d33894fb9fb876b394a2319f56f21b1cb726e06e67afa4595514dae0cc93c1a8"
+    }
+  ],
+  "voz_m1": "Generada realmente con recursos locales, noAPI",
+  "wav_duracion": 5.0,
+  "wav_peak": 0.79437255859375,
+  "sin_instalaciones_nuevas": true,
+  "sin_descargas_modelos": true,
+  "coste_servicios": 0,
+  "subtitulos": "editoriales, no alineados con ASR",
+  "revision_artistica_usuario": "pendiente"
+}

@@ -1,0 +1,3 @@
+numpy>=1.24
+Pillow>=10
+# Solo para regenerar voz: onnxruntime y soundfile, junto con los recursos Supertonic3 de tito.

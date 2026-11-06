@@ -1,0 +1,21 @@
+{
+  "proyecto": "Marco Polo: prueba 5s",
+  "version": 1,
+  "duracion": 5,
+  "fps": 24,
+  "resolucion": [
+    720,
+    1280
+  ],
+  "voz": "Supertonic3 M1",
+  "texto": "Marco Polo viajó a China… ¡y volvió veinticuatro años después!",
+  "formato": "9:16",
+  "estilo": "2D elástico, sin zoom cíclico",
+  "fuente": "https://www.britannica.com/biography/Marco-Polo",
+  "fechas": [
+    1271,
+    1295
+  ],
+  "precision": "24 años de viaje total; no 24 años viviendo en China",
+  "ruta": "representación simbólica, no trazado histórico exacto"
+}

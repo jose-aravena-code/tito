@@ -1,0 +1,8 @@
+Trabaja sobre esta carpeta del repositorio tito:
+fabrica_videos/proyectos/marco_polo_5s_v1/
+
+Prueba exacta de5s,9:16,2Delástico. Lee narracion.txt,GUION_Y_ESCENAS.md yproyecto.json. Mantén el texto histórico y distingue24añosdeviajetotal de17añosaproxenChina.
+
+La vozM1deprueba ya está en salida/voz_m1_5s.wav. Puedes usarla sin descargar modelos. No asumas que un fallo descargandoWhisper también afectaTTS:comprueba cada recurso por separado. Si faltan pesos o laredlosbloquea,continúa con elWAVincluido; no cambiesdevoz ni usesAPIdepago automáticamente.
+
+Revisa imagen ysincronización; los subtítulos actuales son editoriales. Copia a v2 antes de cambiar elproyecto. No sobrescribas otrosvídeos ni AGENTS.md/CLAUDE.md. Devuelve un ZIP de la versión trabajada y un resumen breve. No publiques, hagaspush ni conectes cuentas sin autorización.

@@ -1,0 +1,13 @@
+{
+  "modelo": "Supertonic3 M1 local, mismo helper/estilo de tito",
+  "texto": "Marco Polo viajó a China… ¡y volvió veinticuatro años después!",
+  "velocidad_generacion": 1.1,
+  "pasos": 24,
+  "duracion_sin_pausas_extremas": 4.070566893424036,
+  "atempo": 1,
+  "duracion_entrega": 5,
+  "descargas": false,
+  "api": false,
+  "coste_servicios": 0,
+  "transcripcion": "No requerida para sintetizar. Subtítulos editoriales de prueba; escucha humana pendiente."
+}
